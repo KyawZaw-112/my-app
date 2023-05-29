@@ -12,7 +12,7 @@ const Board = ({ setIsDrink }) => {
         }
 		return "grid-cols-4"
 	}
-	const boardOption = parseInt(window.localStorage.getItem("boardOption"));
+	const boardOption = parseInt(window.localStorage.getItem("boardOption"))||16;
 	const [board, setBoard] = useState(generateBoard(parseInt(boardOption)));
     const [boardChange , setBoardChange] = useState(updateBoardStyle(boardOption))
 	const handleSelect = (index) => {
